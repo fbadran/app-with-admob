@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		DD6BC769246207270056D28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BC768246207270056D28C /* AppDelegate.swift */; };
 		DD6BC76B246207270056D28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BC76A246207270056D28C /* SceneDelegate.swift */; };
-		DD6BC76D246207270056D28C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BC76C246207270056D28C /* ViewController.swift */; };
+		DD6BC76D246207270056D28C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BC76C246207270056D28C /* HomeVC.swift */; };
 		DD6BC770246207270056D28C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6BC76E246207270056D28C /* Main.storyboard */; };
 		DD6BC772246207270056D28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6BC771246207270056D28C /* Assets.xcassets */; };
 		DD6BC775246207270056D28C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6BC773246207270056D28C /* LaunchScreen.storyboard */; };
+		DD6BC77E2462125C0056D28C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6BC77D2462125C0056D28C /* StoreKit.framework */; };
+		DD6BC780246222E00056D28C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6BC77F246222E00056D28C /* GoogleMobileAds.framework */; };
+		DD6BC784246319630056D28C /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BC783246319630056D28C /* PurchaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD6BC765246207270056D28C /* daily-dose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daily-dose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6BC768246207270056D28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD6BC76A246207270056D28C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD6BC76C246207270056D28C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD6BC76C246207270056D28C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD6BC76F246207270056D28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6BC771246207270056D28C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6BC774246207270056D28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD6BC776246207270056D28C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6BC77D2462125C0056D28C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DD6BC77F246222E00056D28C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		DD6BC783246319630056D28C /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6BC780246222E00056D28C /* GoogleMobileAds.framework in Frameworks */,
+				DD6BC77E2462125C0056D28C /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				DD6BC767246207270056D28C /* daily-dose */,
 				DD6BC766246207270056D28C /* Products */,
+				DD6BC77C2462125C0056D28C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,41 @@
 		DD6BC767246207270056D28C /* daily-dose */ = {
 			isa = PBXGroup;
 			children = (
+				DD6BC782246319530056D28C /* Services */,
+				DD6BC7812463193E0056D28C /* Controller */,
 				DD6BC768246207270056D28C /* AppDelegate.swift */,
 				DD6BC76A246207270056D28C /* SceneDelegate.swift */,
-				DD6BC76C246207270056D28C /* ViewController.swift */,
 				DD6BC76E246207270056D28C /* Main.storyboard */,
 				DD6BC771246207270056D28C /* Assets.xcassets */,
 				DD6BC773246207270056D28C /* LaunchScreen.storyboard */,
 				DD6BC776246207270056D28C /* Info.plist */,
 			);
 			path = "daily-dose";
+			sourceTree = "<group>";
+		};
+		DD6BC77C2462125C0056D28C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BC77F246222E00056D28C /* GoogleMobileAds.framework */,
+				DD6BC77D2462125C0056D28C /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD6BC7812463193E0056D28C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BC76C246207270056D28C /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD6BC782246319530056D28C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BC783246319630056D28C /* PurchaseManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD6BC76D246207270056D28C /* ViewController.swift in Sources */,
+				DD6BC76D246207270056D28C /* HomeVC.swift in Sources */,
 				DD6BC769246207270056D28C /* AppDelegate.swift in Sources */,
+				DD6BC784246319630056D28C /* PurchaseManager.swift in Sources */,
 				DD6BC76B246207270056D28C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,11 +322,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4P9825CF5S;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/daily-dose",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "daily-dose/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.faisal.daily-dose";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -304,11 +349,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4P9825CF5S;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/daily-dose",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "daily-dose/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.faisal.daily-dose";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
